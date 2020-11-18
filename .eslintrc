@@ -6,6 +6,10 @@
         "es6": true
     },
     "rules": {
+        "arrow-spacing": [
+            "error",
+            { "before": true, "after": true }
+        ],
         "indent": [
             "error",
             2
@@ -13,6 +17,10 @@
         "linebreak-style": [
             "error",
             "unix"
+        ],
+        "lines-between-class-members": [
+            "error",
+            "always"
         ],
         "quotes": [
             "error",
