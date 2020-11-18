@@ -1,0 +1,30 @@
+{
+  "name": "recursion",
+  "version": "0.0.0",
+  "description": "Recursion",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint:fix": "eslint --fix ./lib ./test",
+    "test": "jest ./test/power.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilitHambardzumyan/recursion.git"
+  },
+  "devDependencies": {
+    "eslint": "7.13.0",
+    "jest": "26.6.3"
+  },
+  "keywords": [
+    "recursion"
+  ],
+  "author": "lilii.hambardzumyan@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LilitHambardzumyan/recursion/issues"
+  },
+  "homepage": "https://github.com/LilitHambardzumyan/recursion#readme"
+}
