@@ -162,12 +162,10 @@ describe('round():', () => {
     const result = MathExtensions.round(0)
     expect(result).toBe(0)
   })
-
   test('should be valid. The number is positive, and the decimal is less than five.', () => {
     const result = MathExtensions.round(2.456)
     expect(result).toBe(2)
   })
-
   test('should be valid. The number is positive, and the decimal is more than five.', () => {
     const result = MathExtensions.round(2.564)
     expect(result).toBe(3)
