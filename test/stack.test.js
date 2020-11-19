@@ -28,6 +28,7 @@ describe('Stack:', () => {
 
       expect(result).toBe(5)
     })
+
     test('should throw an error. The stack is empty.', () => {
       const result = () => stack.pop()
 
@@ -62,6 +63,22 @@ describe('Stack:', () => {
       const result = stack.isEmpty()
         
       expect(result).toBe(false)
+    })
+  })
+
+  describe('size:', () => {
+    test('should return the length of the stack. Initially was empty.', () => {
+      const result = stack.size()
+
+      expect(result).toBe(0)
+    })
+
+    test('should return the length of the stack. Initially was not empty.', () => {
+      stack.push(1)
+      stack.push(7)
+      const result = stack.size()
+
+      expect(result).toBe(2)
     })
   })
 })
