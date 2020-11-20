@@ -5,7 +5,22 @@ describe('Queue:', () => {
   beforeEach(() => {
     queue = new Queue()
   })
-    
+  describe('constructor:', () => {
+    test('should be instance of Queue:', () => {
+
+      expect(queue).toBeInstanceOf(Queue)
+    })
+
+    test('should create queue from given elements:', () => {
+      queue = new Queue([5,6,7])
+
+      expect(queue).toBeInstanceOf(Queue)
+      expect(queue.size()).toBe(3)
+      expect(queue.isEmpty()).toBe(false)
+    })
+  })
+
+
   describe('enqueue(...):', () => {
     test('should add element and return it. Initially was empty.', () => {
       const result = queue.enqueue(23)
@@ -81,6 +96,14 @@ describe('Queue:', () => {
       const result = queue.size()
 
       expect(result).toBe(2)
+    })
+  })
+
+  describe('_deepCopy:', () => {
+    test('should copy the nested elements of the queue.', () => {
+      const result = Queue._deepCopy([6,7,9])
+
+      expect(result).toEqual([6,7,9])
     })
   })
 })
