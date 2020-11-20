@@ -6,6 +6,20 @@ describe('Stack:', () => {
     stack = new Stack()
   })
 
+  describe('constructor:', () => {
+    test('should be instance of Stack.', () => {
+      expect(stack).toBeInstanceOf(Stack)
+    })
+
+    test('should create stack from given elements.', () => {
+      stack = new Stack([1, 2])
+
+      expect(stack).toBeInstanceOf(Stack)
+      expect(stack.isEmpty()).toBe(false)
+      expect(stack.size()).toBe(2)
+    })
+  })
+
   describe('push(...):', () => {
     test('should add element and return it. Initially was empty.', () => {
       const result = stack.push(54)
@@ -79,6 +93,14 @@ describe('Stack:', () => {
       const result = stack.size()
 
       expect(result).toBe(2)
+    })
+  })
+
+  describe('_deepCopy:', () => {
+    test('should copy the nested elements of the stack.', () => {
+      const result = Stack._deepCopy([1,2,5])
+
+      expect(result).toEqual([1,2,5])
     })
   })
 })
